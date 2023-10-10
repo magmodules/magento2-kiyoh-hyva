@@ -1,5 +1,5 @@
 
-<img width="924" alt="hyva-kiyoh-magento" src="https://github.com/magmodules/magento2-kiyoh-hyva/assets/24823946/d86a920f-0e5d-46c3-85c5-a1bd8546decc">
+<img width="924" alt="hyva-kiyoh-magento" src="https://github.com/magmodules/magento2-kiyoh-hyva/assets/24823946/b326c8ad-e3e2-4c6b-a8c7-255de8f8a813">
 
 
 # Kiyoh Hyvä Compatibility plugin
@@ -11,8 +11,8 @@ Kiyoh plugin Hyvä Compatibility plugin for the Magento Hyva theme has the follo
 - [Hyvä](https://github.com/hyva-themes)
 - [Magmodules Kiyoh Reviews](https://www.magmodules.eu/magento2-kiyoh-reviews.html)    
 
+<img width="933" alt="magento-hyva-kiyoh" src="https://github.com/magmodules/magento2-kiyoh-hyva/assets/24823946/8a3d47c7-71a6-403d-8102-b4a862638e80">
 
-<img width="933" alt="magento-hyva-kiyoh" src="https://github.com/magmodules/magento2-kiyoh-hyva/assets/24823946/b50f22a1-7efe-4f2f-88bb-51146ca48a56">
 
 
 ## About Kiyoh Plugin
