@@ -1,0 +1,46 @@
+<?php declare(strict_types=1);
+/**
+ * Copyright © Magmodules.eu. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+ use Magento\Framework\View\Element\Template;
+ use Hyva\Theme\ViewModel\HeroiconsSolid;
+ use Hyva\Theme\Model\ViewModelRegistry;
+
+ /** @var Template $block */
+ /** @var Escaper $escaper */
+ /** @var HeroiconsSolid $heroicons */
+
+$heroicons = $viewModels->require(HeroiconsSolid::class);
+
+$svgSize = $block->hasData('svgSize') ? $block->getData('svgSize') : '20';
+$starColor = $block->hasData('starColor') ? $block->getData('starColor') : '';
+
+$svgSizeStyle = 'width: ' . $svgSize . 'px; height: ' . $svgSize . 'px; ';
+$starColorStyle = $starColor ? 'color: ' . $starColor : '';
+
+$percent = $block->hasData('percent') ? $block->getData('percent') . '%' : '0%';
+?>
+
+<div data-element="box-stars" class="relative inline-flex" title="<?= $percent ?>">
+    <div style="width: <?= $percent; ?>;" 
+         class="absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
+
+        <div class="inline-flex text-[#ffad0f]">
+            <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle . $starColorStyle]); ?>
+            <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle . $starColorStyle]); ?>
+            <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle . $starColorStyle]); ?>
+            <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle . $starColorStyle]); ?>
+            <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle . $starColorStyle]); ?>
+        </div>
+    </div>
+
+    <div class="inline-flex text-gray-300">
+        <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle]); ?>
+        <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle]); ?>
+        <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle]); ?>
+        <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle]); ?>
+        <?= $heroicons->starHtml('', null, null, ["style" => $svgSizeStyle]); ?>
+    </div>
+</div>
