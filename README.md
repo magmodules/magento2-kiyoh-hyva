@@ -11,8 +11,8 @@ Kiyoh plugin Hyvä Compatibility plugin for the Magento Hyva theme has the follo
 - [Hyvä](https://github.com/hyva-themes)
 - [Magmodules Kiyoh Reviews](https://www.magmodules.eu/magento2-kiyoh-reviews.html)    
 
-<img width="933" alt="magento-hyva-kiyoh" src="https://github.com/magmodules/magento2-kiyoh-hyva/assets/24823946/8a3d47c7-71a6-403d-8102-b4a862638e80">
 
+![kiyoh-page](https://github.com/user-attachments/assets/d693262a-6d70-45a2-8313-21544869c9dc)
 
 
 ## About Kiyoh Plugin
