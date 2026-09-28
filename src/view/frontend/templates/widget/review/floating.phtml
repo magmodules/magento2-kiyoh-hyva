@@ -20,10 +20,15 @@ $reviewsCount = $accountInfo[0]['total'];
 $reviewsAvgScore = $accountInfo[0]['avgRatingScore'];
 $reviewsAvgRating = $accountInfo[0]['avgRating'];
 
-if ($block->getWidgetPosition() == 'top_right') $floatingClass = 'top-4 right-4';
-if ($block->getWidgetPosition() == 'top_left') $floatingClass = 'top-4 left-4';
-if ($block->getWidgetPosition() == 'bottom_right') $floatingClass = 'bottom-4 right-4';
-if ($block->getWidgetPosition() == 'bottom_left') $floatingClass = 'bottom-4 left-4';
+// Widget Position is neither required nor pre-selected, so a widget saved without
+// one leaves this empty. Defaulted rather than left undefined: an undefined variable
+// here is a warning, and in developer mode that warning takes down the whole page.
+$floatingClass = match ($block->getWidgetPosition()) {
+    'top_right' => 'top-4 right-4',
+    'top_left' => 'top-4 left-4',
+    'bottom_left' => 'bottom-4 left-4',
+    default => 'bottom-4 right-4',
+};
 
 $heroicons = $viewModels->require(HeroiconsOutline::class);
 ?>
