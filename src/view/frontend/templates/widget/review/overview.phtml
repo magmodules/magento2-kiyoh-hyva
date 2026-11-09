@@ -15,7 +15,6 @@ use Hyva\Theme\Model\ViewModelRegistry;
 $uniqId = rand();
 
 $accountInfo = $block->getAccountInfo();
-$reviewsCount = $accountInfo[0]['total'];
 $reviewsAvgRating = $accountInfo[0]['avgRating'];
 $reviewsAvgScore = $block->getConvertedAvgScore();
 
@@ -24,6 +23,8 @@ $extraClass = !$block->showSummaryBlock() &&
               !$block->showWriteReviewButton() ? '!grid-cols-1' : '';
 
 $reviewsPerStars = $block->getReviewsPerStars();
+// The bars below count the approved reviews in the shop, so "based on" counts the same reviews.
+$reviewsCount = array_sum($reviewsPerStars);
 $starsItem = ['5', '4', '3', '2', '1'];
 ?>
 
@@ -84,7 +85,7 @@ $starsItem = ['5', '4', '3', '2', '1'];
                                                 <?= $star == '3' ? 'bg-[#f1d86d]' : '' ?>
                                                 <?= $star == '2' ? 'bg-[#f2ba63]' : '' ?>
                                                 <?= $star == '1' ? 'bg-[#e2805d]' : '' ?>" 
-                                         style="width: <?= $reviewsPerStars[$star] / $reviewsCount * 100 ?>%;"></div>
+                                         style="width: <?= $reviewsCount ? $reviewsPerStars[$star] / $reviewsCount * 100 : 0 ?>%;"></div>
                                 </div>
 
                                 <span class="opacity-70 text-right"><?= $reviewsPerStars[$star] ?></span>
