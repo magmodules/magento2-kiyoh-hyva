@@ -611,6 +611,7 @@ $viewModel = $block->getViewModel();
                         this.filters    = data.reviews.filters;
                         this.reviews    = data.reviews.data;
                         this.pagination = data.reviews.pagination;
+                        this.showFilters = false;
                     })
                     .catch(err => console.error('Something went wrong during the data update'))
                     .finally(() => { this.isLoading = false } );
