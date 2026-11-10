@@ -9,7 +9,7 @@
     "require": {
       "magento/framework": "*",
       "hyva-themes/magento2-compat-module-fallback": "*",
-      "magmodules/magento2-kiyoh": ">=1.7.0"
+      "magmodules/magento2-kiyoh": ">=1.12.0"
     },
     "autoload": {
       "files": [

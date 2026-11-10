@@ -4,9 +4,9 @@
  */
 
 /*
- * Hyvä 3 and up build their CSS with Tailwind 4, which has no JavaScript config:
+ * Hyvä 1.5 and up build their CSS with Tailwind 4, which has no JavaScript config:
  * hyva-sources looks for this file and inlines the @source below, and never reads
- * tailwind.config.js. That file is kept for Hyvä 1.x, which reads only that one.
+ * tailwind.config.js. That file is kept for earlier Hyvä versions, which read only that one.
  */
 
 @source "../templates/**/*.phtml";
