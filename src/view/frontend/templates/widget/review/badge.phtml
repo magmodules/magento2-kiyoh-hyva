@@ -16,6 +16,9 @@
 $uniqId = $block->getUniqueId();
 
 $accountInfo = $block->getAccountInfo();
+if (empty($accountInfo)) {
+    return;
+}
 $reviewsCount = $accountInfo[0]['total'];
 $reviewsAvgScore = $accountInfo[0]['avgRatingScore'];
 $reviewsAvgRating = $accountInfo[0]['avgRating'];
