@@ -15,6 +15,9 @@ use Hyva\Theme\Model\ViewModelRegistry;
 $uniqId = rand();
 
 $accountInfo = $block->getAccountInfo();
+if (empty($accountInfo)) {
+    return;
+}
 $reviewsAvgRating = $accountInfo[0]['avgRating'];
 $reviewsAvgScore = $block->getConvertedAvgScore();
 
