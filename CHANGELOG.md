@@ -2,6 +2,16 @@
 
 All notable changes to the Kiyoh Hyvä compatibility module will be documented in this file.
 
+## [1.2.1]
+
+**Bugfixes:**
+* The badge, sidebar, floating, textual and overview widgets render nothing when there is no account to show, as with the frontend switched off. The page hosting the widget failed on an undefined array key.
+
+**Compatibility:**
+* Magento 2.4.x
+* Hyvä 1.x, including the Tailwind 4 builds of 1.5 and later
+* Requires Kiyoh 1.12.0 or later.
+
 ## [1.2.0]
 
 **Features:**
